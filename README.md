@@ -16,6 +16,7 @@ The guide is split into sessions. Each session has:
 2. Build the sample code by yourself after reading the session.
 3. Commit your work when the session is complete.
 4. Do not rush to advanced topics before the basics are stable.
+5. Open [PROJECT_STEP_BY_STEP.md](/Users/danhphamquoc/MyData/github/react-learning/PROJECT_STEP_BY_STEP.md) to learn how this repository applies the roadmap in a real sample app.
 
 ## Learning path
 
