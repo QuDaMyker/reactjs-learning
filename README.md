@@ -437,3 +437,66 @@ src/
 ### Suggested commit
 
 `docs(session-6): add mvvm reusable component and state optimization guide`
+
+## Session 7: Linting, unit testing, and performance testing
+
+### Goal
+
+Learn how to protect quality before bugs reach production.
+
+### Learn first
+
+- lint vs format
+- unit test vs integration test
+- component test
+- performance measurement
+
+### Step by step
+
+1. Install quality tools:
+
+```bash
+npm install -D eslint prettier vitest @testing-library/react @testing-library/jest-dom jsdom
+```
+
+2. Add lint rules for:
+   - unused imports
+   - inconsistent style
+   - hooks rules
+3. Create tests for:
+   - render component
+   - button click
+   - form validation
+   - loading and error state
+4. Test a custom hook if it contains business logic.
+5. Run tests in watch mode while coding.
+6. Measure performance with:
+   - React DevTools Profiler
+   - Lighthouse
+   - browser Performance tab
+
+### What to test first
+
+- utility functions
+- form behavior
+- API error state rendering
+- auth redirect behavior
+- important reusable components
+
+### Performance red flags
+
+- large rerender chains
+- too much state at high tree levels
+- expensive list rendering
+- fetching the same data many times
+- bundle size growing without control
+
+### Expected output
+
+- you can enforce code quality with linting
+- you can write useful tests instead of only snapshot tests
+- you can find slow screens with proper tools
+
+### Suggested commit
+
+`docs(session-7): add lint unit test and performance testing guide`
