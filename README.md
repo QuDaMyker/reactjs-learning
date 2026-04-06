@@ -359,3 +359,81 @@ src/
 ### Suggested commit
 
 `docs(session-5): add authentication response handling and token expiry guide`
+
+## Session 6: Advanced state optimization, MVVM, and scalable patterns
+
+### Goal
+
+Move from feature coding into maintainable architecture and performance-aware state design.
+
+### Learn first
+
+- global state vs local state
+- derived state
+- memoization
+- selector pattern
+- View and ViewModel separation
+
+### Step by step
+
+1. Split state types:
+   - local UI state
+   - shared client state
+   - server state
+2. Use Zustand for lightweight client state when needed:
+
+```bash
+npm install zustand
+```
+
+3. Use TanStack Query for server state:
+
+```bash
+npm install @tanstack/react-query
+```
+
+4. Avoid duplicated state:
+   - do not copy server data into many local states
+   - prefer selectors and derived values
+5. Introduce MVVM:
+   - View: UI only
+   - ViewModel: page logic, actions, derived data
+   - Model: API types, mappers, domain rules
+
+### Example MVVM structure
+
+```txt
+src/
+  modules/
+    users/
+      components/
+      pages/
+      view-models/
+      services/
+      models/
+```
+
+### Reusable component rules
+
+- reusable components should be generic, not tied to one business screen
+- business logic should stay outside shared UI
+- prefer composition over too many boolean props
+
+### Optimize state technically
+
+- colocate state near where it is used
+- avoid prop drilling when context or store is truly needed
+- use selectors to reduce unnecessary rerenders
+- debounce search input
+- lazy load heavy routes
+- split code by feature
+
+### Expected output
+
+- you can decide where state should live
+- you can separate screen UI from business logic
+- you understand how to scale a React codebase with less chaos
+
+### Suggested commit
+
+`docs(session-6): add mvvm reusable component and state optimization guide`
