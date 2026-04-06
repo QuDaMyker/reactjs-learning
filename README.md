@@ -289,3 +289,73 @@ Do not put everything in one global store. New developers often over-share state
 ### Suggested commit
 
 `docs(session-4): add state forms and api basics guide`
+
+## Session 5: Response handling, authentication, force login, expired token
+
+### Goal
+
+Build a safer frontend that behaves correctly when the backend returns success, business errors, unauthorized access, or expired tokens.
+
+### Learn first
+
+- HTTP status codes
+- access token and refresh token
+- protected route
+- request interceptor
+- response interceptor
+
+### Step by step
+
+1. Define a clear API module:
+   - `api/client.js`
+   - `api/auth.js`
+   - `api/user.js`
+2. Store tokens in a controlled way.
+3. Add Axios interceptors:
+   - attach token before request
+   - catch `401 Unauthorized`
+   - redirect to login when refresh fails
+4. Create a protected route wrapper.
+5. Handle response states:
+   - `200`: show data
+   - `400`: show validation message
+   - `401`: try refresh or force login
+   - `403`: show permission denied
+   - `500`: show fallback error UI
+6. Clear sensitive state when logout happens.
+
+### Force login and expired token flow
+
+1. user opens protected page
+2. app sends request with access token
+3. backend returns `401`
+4. app tries refresh token once
+5. if refresh works, retry original request
+6. if refresh fails, clear session and navigate to `/login`
+
+### Important beginner note
+
+Do not retry forever. Infinite retry loops are a common production bug.
+
+### Recommended folders
+
+```txt
+src/
+  api/
+    client.js
+    auth.js
+  guards/
+    ProtectedRoute.jsx
+  services/
+    tokenService.js
+```
+
+### Expected output
+
+- you can design a clean login flow
+- you know how to react to expired sessions
+- you can protect routes and show the right error state
+
+### Suggested commit
+
+`docs(session-5): add authentication response handling and token expiry guide`
