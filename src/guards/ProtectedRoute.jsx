@@ -4,10 +4,8 @@ import { useAuthStore } from '../stores/authStore';
 
 export function ProtectedRoute() {
   const location = useLocation();
-  const { user, isHydrated } = useAuthStore((state) => ({
-    user: state.user,
-    isHydrated: state.isHydrated,
-  }));
+  const user = useAuthStore((state) => state.user);
+  const isHydrated = useAuthStore((state) => state.isHydrated);
 
   if (!isHydrated) {
     return <div className="card">Loading session...</div>;

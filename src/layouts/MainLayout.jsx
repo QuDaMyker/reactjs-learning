@@ -14,10 +14,8 @@ const navItems = [
 ];
 
 export function MainLayout() {
-  const { user, clearSession } = useAuthStore((state) => ({
-    user: state.user,
-    clearSession: state.clearSession,
-  }));
+  const user = useAuthStore((state) => state.user);
+  const clearSession = useAuthStore((state) => state.clearSession);
 
   return (
     <div className="app-shell">
