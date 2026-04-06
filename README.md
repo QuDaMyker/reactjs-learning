@@ -629,7 +629,7 @@ This repository now includes a GitHub Actions workflow for GitHub Pages deployme
 2. Open repository `Settings`.
 3. Open `Pages`.
 4. Set `Source` to `GitHub Actions`.
-5. Push to `master` to trigger deployment.
+5. Push to `main` to trigger deployment.
 
 ### Important note
 
