@@ -144,6 +144,7 @@ src/
 - run `npm run preview`
 - review bundle size and route loading
 - deploy to Vercel or Netlify
+- deploy to GitHub Pages with the included GitHub Actions workflow
 
 ## 8. Suggested next tasks
 

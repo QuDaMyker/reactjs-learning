@@ -619,6 +619,22 @@ Rule for senior engineers:
 - keep commits small and meaningful
 - write code that the next teammate can understand quickly
 
+## GitHub Pages deploy
+
+This repository now includes a GitHub Actions workflow for GitHub Pages deployment.
+
+### How to enable
+
+1. Push this repository to GitHub.
+2. Open repository `Settings`.
+3. Open `Pages`.
+4. Set `Source` to `GitHub Actions`.
+5. Push to `master` to trigger deployment.
+
+### Important note
+
+The app uses `HashRouter` so page navigation still works correctly on GitHub Pages without server-side route rewrites.
+
 ### Suggested commit
 
 `docs(session-8): add deployment roadmap and senior optimization guidance`
