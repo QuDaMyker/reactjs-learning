@@ -44,6 +44,7 @@ export function HomePage() {
             <li>Start with simple UI changes in shared components.</li>
             <li>Move into routing and feature pages.</li>
             <li>Then connect state, APIs, auth, testing, and deployment.</li>
+            <li>Use the protected Products page to test refresh-token behavior.</li>
           </ul>
         </AppCard>
       </div>

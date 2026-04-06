@@ -157,6 +157,10 @@ textarea {
   margin-bottom: 1rem;
 }
 
+.card-actions {
+  margin-top: 1rem;
+}
+
 .plain-list,
 .ordered-list {
   margin: 0;
@@ -223,6 +227,22 @@ textarea {
   font-size: 0.9rem;
 }
 
+.sidebar .card {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.sidebar .muted {
+  color: #5c677d;
+}
+
+.sidebar h2 {
+  color: #14213d;
+}
+
+.content > * {
+  animation: fade-in 0.35s ease;
+}
+
 @media (max-width: 900px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -234,5 +254,16 @@ textarea {
 
   .content {
     padding: 1rem;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

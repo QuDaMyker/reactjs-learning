@@ -1,21 +1,30 @@
 import { NavLink, Outlet } from 'react-router-dom';
 
+import { env } from '../config/env';
 import { AppCard } from '../shared/components/AppCard';
+import { useAuthStore } from '../stores/authStore';
 
 const navItems = [
   { to: '/', label: 'Home' },
   { to: '/learning', label: 'Step by Step' },
+  { to: '/build-steps', label: 'Build Steps' },
   { to: '/playground', label: 'Playground' },
+  { to: '/products', label: 'Products' },
   { to: '/login', label: 'Login' },
 ];
 
 export function MainLayout() {
+  const { user, clearSession } = useAuthStore((state) => ({
+    user: state.user,
+    clearSession: state.clearSession,
+  }));
+
   return (
     <div className="app-shell">
       <aside className="sidebar">
         <div>
           <p className="eyebrow">React Journey</p>
-          <h1>React Learning App</h1>
+          <h1>{env.appName}</h1>
           <p className="muted">
             A learning project that grows from beginner setup into scalable patterns.
           </p>
@@ -39,6 +48,20 @@ export function MainLayout() {
             <li>Reusable components and routing</li>
             <li>State, API, auth, tests, and performance</li>
           </ul>
+        </AppCard>
+
+        <AppCard title="Current session">
+          <ul className="plain-list">
+            <li>User: {user?.name || 'Guest'}</li>
+            <li>Status: {user ? 'Authenticated' : 'Anonymous'}</li>
+          </ul>
+          {user ? (
+            <div className="card-actions">
+              <button type="button" className="button secondary block" onClick={clearSession}>
+                Logout
+              </button>
+            </div>
+          ) : null}
         </AppCard>
       </aside>
 
