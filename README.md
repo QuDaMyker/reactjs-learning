@@ -102,3 +102,61 @@ npm run preview
 ### Suggested commit
 
 `docs(session-1): add project setup and run guide for React + Vite`
+
+## Session 2: Components, props, events, and reusable UI
+
+### Goal
+
+Learn how React UIs are built from small components and how to reuse them safely.
+
+### Learn first
+
+- component as a function
+- JSX
+- props
+- event handling
+- conditional render
+- list render with `map`
+- basic folder structure
+
+### Step by step
+
+1. Create a `components` folder.
+2. Start with simple UI parts:
+   - `Button`
+   - `Input`
+   - `Card`
+   - `Header`
+3. Pass data from parent to child with props.
+4. Add click events like `onClick`.
+5. Render a list of cards from an array.
+6. Add empty state UI when there is no data.
+7. Extract repeated JSX into a reusable component.
+
+### Example structure
+
+```txt
+src/
+  components/
+    Button.jsx
+    Card.jsx
+    Input.jsx
+  pages/
+  App.jsx
+```
+
+### Good habits
+
+- use small components with one clear responsibility
+- prefer clear prop names like `title`, `onSubmit`, `isLoading`
+- avoid giant components with too much UI and logic mixed together
+
+### Expected output
+
+- you can break one screen into many small components
+- you understand when to create a reusable component
+- you know the difference between a page component and a shared component
+
+### Suggested commit
+
+`docs(session-2): add beginner guide for components props events and reusable UI`
