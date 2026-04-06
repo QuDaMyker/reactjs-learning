@@ -500,3 +500,124 @@ npm install -D eslint prettier vitest @testing-library/react @testing-library/je
 ### Suggested commit
 
 `docs(session-7): add lint unit test and performance testing guide`
+
+## Session 8: Deploy, production readiness, and technical optimization
+
+### Goal
+
+Understand how a React app moves from local development to a production environment.
+
+### Learn first
+
+- environment variables
+- build command
+- static hosting
+- CI basics
+- monitoring and logging
+
+### Step by step
+
+1. Prepare environment files:
+   - `.env.development`
+   - `.env.production`
+2. Build the app:
+
+```bash
+npm run build
+```
+
+3. Deploy to one platform first:
+   - Vercel
+   - Netlify
+   - AWS S3 + CloudFront
+4. Add SPA route fallback configuration.
+5. Confirm:
+   - refresh still works on nested routes
+   - API base URL is correct
+   - source maps and secrets are handled safely
+6. Add CI ideas:
+   - install dependencies
+   - run lint
+   - run test
+   - run build
+7. Add monitoring later:
+   - error tracking
+   - analytics
+   - web vitals
+
+### Technical optimization checklist
+
+- use route-level code splitting
+- use image optimization
+- virtualize long lists
+- cache server state smartly
+- prevent duplicate requests
+- use skeleton loading for better UX
+- keep bundle dependencies under review
+- remove dead code and unused UI libraries
+- document feature boundaries
+- prefer consistent patterns over clever shortcuts
+
+### External UI library guidance
+
+You can learn faster with a UI library, but choose it carefully.
+
+- for fast admin UI: Ant Design, MUI
+- for flexible headless patterns: Radix UI, Headless UI
+- for utility-first styling: Tailwind CSS
+
+Rule for senior engineers:
+
+- do not let the UI library control the whole architecture
+- wrap third-party UI in your own shared components when needed
+
+### From newbie to senior
+
+### Newbie focus
+
+- run project
+- build components
+- understand props and state
+- call API
+- handle loading and error
+
+### Mid-level focus
+
+- routing
+- auth flow
+- shared hooks
+- reusable components
+- testing
+- code organization
+
+### Senior focus
+
+- architecture decisions
+- state boundaries
+- performance strategy
+- design system thinking
+- deployment safety
+- maintainability over time
+
+## Suggested long-term roadmap
+
+1. Build a small CRUD app.
+2. Add login and protected routes.
+3. Add reusable form components.
+4. Add React Query and optimize server state.
+5. Refactor one feature into MVVM style.
+6. Add tests and lint rules.
+7. Deploy to production.
+8. Review performance and bundle size.
+
+## Final advice
+
+- learn fundamentals before chasing advanced libraries
+- do not treat every problem as a global state problem
+- do not optimize too early, but always measure before optimizing
+- keep commits small and meaningful
+- write code that the next teammate can understand quickly
+
+### Suggested commit
+
+`docs(session-8): add deployment roadmap and senior optimization guidance`
