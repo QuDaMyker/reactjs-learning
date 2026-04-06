@@ -160,3 +160,69 @@ src/
 ### Suggested commit
 
 `docs(session-2): add beginner guide for components props events and reusable UI`
+
+## Session 3: Routing, layout, and page structure
+
+### Goal
+
+Learn how to build a multi-page React app without refreshing the browser.
+
+### Learn first
+
+- client-side routing
+- route params
+- nested routes
+- shared layout
+- not found page
+
+### Step by step
+
+1. Install React Router:
+
+```bash
+npm install react-router-dom
+```
+
+2. Create pages:
+   - `HomePage`
+   - `ProductsPage`
+   - `ProductDetailPage`
+   - `LoginPage`
+   - `NotFoundPage`
+3. Create a root layout with header, sidebar, and footer.
+4. Configure routes with `createBrowserRouter` or `BrowserRouter`.
+5. Add a dynamic route like `/products/:id`.
+6. Use `Link` and `NavLink`.
+7. Add a `404` page.
+
+### Recommended structure
+
+```txt
+src/
+  layouts/
+    MainLayout.jsx
+  pages/
+    HomePage.jsx
+    LoginPage.jsx
+    ProductsPage.jsx
+    ProductDetailPage.jsx
+    NotFoundPage.jsx
+  router/
+    index.jsx
+```
+
+### Senior mindset
+
+- keep route definition centralized
+- separate layout from page content
+- use route-based code splitting later for performance
+
+### Expected output
+
+- you can navigate between pages
+- you can read route params
+- you understand where to place shared layout code
+
+### Suggested commit
+
+`docs(session-3): add routing layout and page structure guide`
