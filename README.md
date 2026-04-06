@@ -226,3 +226,66 @@ src/
 ### Suggested commit
 
 `docs(session-3): add routing layout and page structure guide`
+
+## Session 4: State management, forms, and API basics
+
+### Goal
+
+Understand how data changes in React and how the UI stays in sync with user input and server data.
+
+### Learn first
+
+- `useState`
+- lifting state up
+- controlled inputs
+- loading and error state
+- basic API request flow
+
+### Step by step
+
+1. Start with local state:
+   - counter
+   - search input
+   - modal open and close
+2. Move shared state to the nearest common parent.
+3. Build a form with:
+   - name
+   - email
+   - password
+4. Add validation with simple rules first.
+5. Install API helper libraries:
+
+```bash
+npm install axios react-hook-form zod @hookform/resolvers
+```
+
+6. Fetch data from a public API.
+7. Render:
+   - loading state
+   - success state
+   - empty state
+   - error state
+8. Learn the difference between server state and UI state.
+
+### Important rule
+
+Do not put everything in one global store. New developers often over-share state too early.
+
+### Suggested API flow
+
+1. call API
+2. show loading
+3. receive data
+4. normalize only if needed
+5. update UI
+6. handle error clearly
+
+### Expected output
+
+- you know when local state is enough
+- you can submit forms and validate user input
+- you can connect a page to an API
+
+### Suggested commit
+
+`docs(session-4): add state forms and api basics guide`
